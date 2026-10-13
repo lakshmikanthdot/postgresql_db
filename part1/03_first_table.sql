@@ -117,14 +117,16 @@ VALUES
 -- psql -U postgres -d postgresql_part1
 -- export PGPASSWORD=admin
 -- \dt basics.*
--- SELECT * FROM basics.students;
 
 --- to create the table
 -- CREATE TABEL schemaname.tabelname( column1 datatype, column2 datatype, column3 datatype );
 
 -- to insert the data into the table
- -- INSERT INTO schemaname.tabelname (column1, column2, column3)
- -- VALUES (value1, value2, value3);
+-- INSERT INTO schemaname.tabelname (column1, column2, column3)
+-- VALUES (value1, value2, value3);
+
+-- to check the data inside the table
+-- SELECT * FROM schemaname.tabelname;
 
 -- if your are inside the psql shell
 -- we want to run the sql file, we can use the command \i
