@@ -44,8 +44,57 @@ VALUES
   ('chandu', 'chandu@gmail.com', 28)
 
 -- commands
--- commands
+
+-- ## 3rd part
+
+-- to check the how many tables we have in the current database
+-- \dt
+-- psql -U postgres -d postgresql_part1 -f part1/03_first_table.sql
+-- psql -U postgres -d postgresql_part1
+-- export PGPASSWORD=admin
+-- \dt basics.*
+
+--- to create the table
+-- CREATE TABEL schemaname.tabelname( column1 datatype, column2 datatype, column3 datatype );
+
+-- to insert the data into the table
+-- INSERT INTO schemaname.tabelname (column1, column2, column3)
+-- VALUES (value1, value2, value3);
+
+-- to check the data inside the table
+-- SELECT * FROM schemaname.tabelname;
+
+-- if your are inside the psql shell
+-- we want to run the sql file, we can use the command \i
+-- \i part1/03_first_table.sql
+
+-- ## 2nd part
+
+-- psql -U postgres -d postgresql_part1 -f part1/02_first_schema.sql
+
+-- to create the schema inside the database
+-- CREATE SCHEMA schema_name;
+
+-- to safety check if the schema exists before creating it
+-- we need to use the IF NOT EXISTS
+-- CREATE SCHEMA IF NOT EXISTS schema_name;
+
+-- to create extension inside the database
+-- CREATE EXTENSION extension_name;
+
+-- to safety check if the extension exists before creating it
+-- we need to use the IF NOT EXISTS
+-- CREATE EXTENSION IF NOT EXISTS extension_name;
+
+-- to check the all the schemas available in the current database
+-- information_schema.schemata is a system catalog table 
+-- which contains the information about all the schemas available in the current database
+-- SELECT schema_name
+-- FROM information_schema.schemata
+-- ORDER BY schema_name;
+
 -- ## 1st part
+
 -- psql -U postgres -d postgres -f part/01/01_first_database.sql
 -- -U means user name
 -- -d means database name
@@ -84,50 +133,3 @@ VALUES
 -- to safety check if the database exists before dropping it
 -- we need to use the IF EXISTS
 -- DROP DATABASE IF EXISTS database_name;
-
--- ## 2nd part
--- psql -U postgres -d postgresql_part1 -f part1/02_first_schema.sql
-
--- to create the schema inside the database
--- CREATE SCHEMA schema_name;
-
--- to safety check if the schema exists before creating it
--- we need to use the IF NOT EXISTS
--- CREATE SCHEMA IF NOT EXISTS schema_name;
-
--- to create extension inside the database
--- CREATE EXTENSION extension_name;
-
--- to safety check if the extension exists before creating it
--- we need to use the IF NOT EXISTS
--- CREATE EXTENSION IF NOT EXISTS extension_name;
-
--- to check the all the schemas available in the current database
--- information_schema.schemata is a system catalog table 
--- which contains the information about all the schemas available in the current database
--- SELECT schema_name
--- FROM information_schema.schemata
--- ORDER BY schema_name;
-
--- ## 3rd part
-
--- to check the how many tables we have in the current database
--- \dt
--- psql -U postgres -d postgresql_part1 -f part1/03_first_table.sql
--- psql -U postgres -d postgresql_part1
--- export PGPASSWORD=admin
--- \dt basics.*
-
---- to create the table
--- CREATE TABEL schemaname.tabelname( column1 datatype, column2 datatype, column3 datatype );
-
--- to insert the data into the table
--- INSERT INTO schemaname.tabelname (column1, column2, column3)
--- VALUES (value1, value2, value3);
-
--- to check the data inside the table
--- SELECT * FROM schemaname.tabelname;
-
--- if your are inside the psql shell
--- we want to run the sql file, we can use the command \i
--- \i part1/03_first_table.sql
