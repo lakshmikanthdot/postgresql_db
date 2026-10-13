@@ -119,6 +119,13 @@ VALUES
 -- \dt basics.*
 -- SELECT * FROM basics.students;
 
+--- to create the table
+-- CREATE TABEL schemaname.tabelname( column1 datatype, column2 datatype, column3 datatype );
+
+-- to insert the data into the table
+ -- INSERT INTO schemaname.tabelname (column1, column2, column3)
+ -- VALUES (value1, value2, value3);
+
 -- if your are inside the psql shell
 -- we want to run the sql file, we can use the command \i
 -- \i part1/03_first_table.sql
