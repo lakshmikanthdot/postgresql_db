@@ -54,6 +54,12 @@ SELECT * FROM basics.value_examples WHERE nickname IS NOT NULL;
 -- ## 6th part
 -- psql -U postgres -d postgresql_part1 -f part1/06_null_empty_string.sql
 -- psql -U postgres -d postgresql_part1
+-- NULL
+-- SELECT * FROM schemaname.tablename WHERE column_name IS NULL;
+-- SELECT * FROM schemaname.tablename WHERE column_name IS NOT NULL;
+-- EMPTY STRING
+-- SELECT * FROM schemaname.tablename WHERE column_name = '';
+
 
 -- ## 5th part
 -- psql -U postgres -d postgresql_part1 -f part1/05_other_data_types.sql
