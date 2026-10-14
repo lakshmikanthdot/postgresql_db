@@ -42,7 +42,7 @@ WHERE is_active = TRUE AND (price < 1000 or stock >= 100);
 
 -- commands
 
--- 6th part
+-- ## 6th part
 -- psql -U postgres -d postgresql_part1 -f part2/06_and_or_not_filters.sql
 -- psql -U postgres -d postgresql_part1
 -- export PGPASSWORD=admin
