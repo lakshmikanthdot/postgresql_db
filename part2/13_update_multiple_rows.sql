@@ -24,6 +24,8 @@ WHERE stock = 0;
 SELECT name, price, category, stock, is_active
 FROM products
 WHERE is_active = FALSE;
+
+
 -- commands
 
 -- ## 13th part
