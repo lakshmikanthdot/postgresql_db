@@ -1,10 +1,17 @@
 
 
+SELECT name, price, stock, sku
+FROm products
+WHERE sku = 'ELEC-KEY-001';
 
 
 -- commands
 
 -- 
+
+-- ## 12th part
+-- psql -U postgres -d postgresql_part1 -f part2/12_update_single_row.sql
+-- psql -U postgres -d postgresql_part1
 
 -- ## 11th part
 -- psql -U postgres -d postgresql_part1 -f part2/11_limit_offset_pagintion.sql
