@@ -1,6 +1,6 @@
 -- like - case sensitive pattern match
 -- ilike - case insensitive pattern match
--- % measns any no od characters
+-- % measns any no of characters
 -- exactly one character
 
 
@@ -26,6 +26,7 @@ WHERE name ILIKE '%desk%';
 
 
 -- any where in the name or description containes chair
+-- check with multiple columns
 SELECT name, category, description
 FROM products
 WHERE name ILIKE '%chair%'
