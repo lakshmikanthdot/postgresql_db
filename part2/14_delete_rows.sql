@@ -1,7 +1,20 @@
 
+INSERT INTO products (name, category, price, stock, sku, description)
+VALUES 
+('temp product to be deleted', 'electronics', 345.45, 45, 'ELEC-TEMP-013','temp product desc');
+
+
+SELECT *
+FROM products
+WHERE sku = 'ELEC-TEMP-013';
 
 
 -- commands
+
+-- ## 14th part
+-- psql -U postgres -d postgresql_part1 -f part2/14_delete_rows.sql
+-- psql -U postgres -d postgresql_part1
+
 
 -- ## 13th part
 -- psql -U postgres -d postgresql_part1 -f part2/13_update_multiple_rows.sql
