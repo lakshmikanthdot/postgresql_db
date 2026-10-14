@@ -2,21 +2,28 @@
 -- if we use the non-unique key it will update multiple rows
 
 -- i want to see how many products have in stationery
-SELECT name, price, category, stock, is_active
-FROM products
-WHERE category = 'stationery';
+-- SELECT name, price, category, stock, is_active
+-- FROM products
+-- WHERE category = 'stationery';
 
--- i want to increase the stock price of stationery products by 10%
+-- -- i want to increase the stock price of stationery products by 10%
+-- UPDATE products
+-- SET price = (price * 1.10)
+-- WHERE category = 'stationery';
+
+-- -- verify the update, you can use the following query:
+-- SELECT name, price, category, stock, is_active
+-- FROM products
+-- WHERE category = 'stationery';
+
+-- mark out of stock stationery products as inactive
 UPDATE products
-SET price = (price * 1.10)
-WHERE category = 'stationery';
+SET is_active = FALSE
+WHERE stock = 0;
 
--- verify the update, you can use the following query:
 SELECT name, price, category, stock, is_active
 FROM products
-WHERE category = 'stationery';
-
-
+WHERE is_active = FALSE;
 -- commands
 
 -- ## 13th part?
