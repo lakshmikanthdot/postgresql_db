@@ -26,7 +26,11 @@ SELECT name, category, price
 FROM products
 WHERE price BETWEEN 100 AND 2000;
 
-
+-- combine IN and BETWEEN example
+SELECT name, category, price, stock
+FROM products
+WHERE category IN ('electronics', 'stationery')
+   AND price BETWEEN 10 AND 1499;
 
 -- commands
 
