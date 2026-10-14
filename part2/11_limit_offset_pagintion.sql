@@ -43,7 +43,7 @@ LIMIT 5 OFFSET 10;
 
 -- commands
 
--- 11th part
+-- ## 11th part
 -- psql -U postgres -d postgresql_part1 -f part2/11_limit_offset_pagintion.sql
 -- psql -U postgres -d postgresql_part1
 
