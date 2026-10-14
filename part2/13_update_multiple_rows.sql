@@ -1,3 +1,6 @@
+-- if we use the unqiue key it will update the single row
+-- if we use the non-unique key it will update multiple rows
+
 -- i want to see how many products have in stationery
 SELECT name, price, category, stock, is_active
 FROM products
