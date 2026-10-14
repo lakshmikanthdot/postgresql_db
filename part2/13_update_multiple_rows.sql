@@ -26,7 +26,7 @@ FROM products
 WHERE is_active = FALSE;
 -- commands
 
--- ## 13th part?
+-- ## 13th part
 -- psql -U postgres -d postgresql_part1 -f part2/13_update_multiple_rows.sql
 -- psql -U postgres -d postgresql_part1
 
