@@ -1,21 +1,42 @@
 -- like - case sensitive pattern match
 -- ilike - case insensitive pattern match
 -- % measns any no od characters
--- _ exactly one character
+-- exactly one character
 
 
 -- name will start with Wireless
--- % anything come after Wireless
+-- % anything come after Wireless (matching)
 SELECT name, price
 FROM products
-WHERE name LIKE 'Wireless%'
+WHERE name LIKE 'Wireless%';
+
+--     name      |  price  
+-- ----------------+---------
+--  Wireless Mouse | 1299.00
+-- (1 row)
 
 
+-- where the name containes desk
+-- ignore uppercase and lowercase letters
+-- case insensitive pattern match
+-- match with DESK, Desk, desk, dEsK, deSK, DeSk, dESk, DESK
+SELECT name, category, price
+FROM products
+WHERE name ILIKE '%desk%';
+
+
+-- any where in the name or description containes chair
+SELECT name, category, description
+FROM products
+WHERE name ILIKE '%chair%'
+    OR description ILIKE '%chair%';
 
 
 -- commands
 
--- 
+--  ## 7th part
+-- psql -U postgres -d postgresql_part1 -f part2/07_like_ilike_patterns.sql
+-- psql -U postgres -d postgresql_part1
 
 -- ## 6th part
 -- psql -U postgres -d postgresql_part1 -f part2/06_and_or_not_filters.sql
