@@ -5,6 +5,20 @@ FROm products
 WHERE sku = 'ELEC-KEY-001';
 
 
+-- i want to update the price 3499 to 2499 where the sku is ELEC-KEY-001
+-- use UPDATE with table name
+-- SET the new value to the column name
+-- use WHERE to filter the row to be updated
+UPDATE products
+SET price = 2499.00,
+    stock = 15
+WHERE sku = 'ELEC-KEY-001';
+
+-- to verify the update, you can use the following query:
+SELECT name, price, stock, sku
+FROm products
+WHERE sku = 'ELEC-KEY-001';
+
 -- commands
 
 -- 
