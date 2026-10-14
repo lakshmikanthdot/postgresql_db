@@ -1,3 +1,7 @@
+-- i want to see how many products have in stationery
+SELECT name, price, category, stock, is_active
+FROM products
+WHERE category = 'stationery';
 
 
 
