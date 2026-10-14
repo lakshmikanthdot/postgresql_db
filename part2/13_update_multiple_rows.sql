@@ -3,8 +3,15 @@ SELECT name, price, category, stock, is_active
 FROM products
 WHERE category = 'stationery';
 
+-- i want to increase the stock price of stationery products by 10%
+UPDATE products
+SET price = (price * 1.10)
+WHERE category = 'stationery';
 
-
+-- verify the update, you can use the following query:
+SELECT name, price, category, stock, is_active
+FROM products
+WHERE category = 'stationery';
 
 
 -- commands
