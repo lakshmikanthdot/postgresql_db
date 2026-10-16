@@ -178,7 +178,6 @@ VALUES
 
 -- to drop the a database
 -- DROP DATABASE database_name;
--- dummy commit
 
 -- to safety check if the database exists before dropping it
 -- we need to use the IF EXISTS
