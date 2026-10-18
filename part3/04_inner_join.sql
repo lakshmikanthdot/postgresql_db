@@ -8,9 +8,12 @@ SELECT
   posts.title AS post_title,
   posts.status,
   posts.views
+-- posts is child
+-- users is parent
 FROM posts
 INNER JOIN users 
 -- matching rule
+-- checking the user id with the user id in the posts table
    ON users.id = posts.user_id
 WHERE posts.status = 'published'
 ORDER BY posts.views DESC;
