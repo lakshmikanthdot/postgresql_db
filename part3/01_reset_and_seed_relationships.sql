@@ -137,5 +137,4 @@ SELECT 'Part 3 reduced database reset and sample data inserted successfully.' AS
 -- relationships sessions
 -- commands
 -- psql -U postgres -d postgresql_part1 -f part3/01_reset_and_seed_relationships.sql
--- psql -U postgres -d postgresql_part1 -f part2/15_returning_after_insert.sql
 -- export PGPASSWORD=admin
