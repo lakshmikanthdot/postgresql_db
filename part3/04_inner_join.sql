@@ -1,6 +1,7 @@
 
 
 -- inner join returns only the matching rows from both tables
+-- there has to be a mathing condition
 
 
 SELECT 
